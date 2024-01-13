@@ -16,7 +16,12 @@
 
 </head>
 
-<body>
+<!-- return false Tidak bisa klik kanan, ctrl A & C -->
+
+<body oncontextmenu="return false" onselectstart="return false"
+  onkeydown="if ((arguments[0] || window.event).ctrlKey) return false">
+  <!-- End -->
+
   <!-- Navbar -->
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
@@ -363,6 +368,25 @@
       </div>
     </div>
   </footer>
+
+  <!-- Java enable copas text -->
+
+  <script type="text/JavaScript">
+    //courtesy of BoogieJack.com
+    function killCopy(e){
+    return false
+    }
+    function reEnable(){
+    return true
+    }
+    document.onselectstart=new Function ("return false")
+    if (window.sidebar){
+    document.onmousedown=killCopy
+    document.onclick=reEnable
+    }
+    </script>
+
+  <!-- End Java -->
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="js/jquery-3.5.1.min.js"></script>
