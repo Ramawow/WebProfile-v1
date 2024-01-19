@@ -14,10 +14,10 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="shortcut icon" href="img/R.ico">
 
-  <!-- gridjs -->
-  <script src="https://unpkg.com/gridjs/dist/gridjs.production.min.js"></script>
-  <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
-
+  <!-- aos animation -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- text animation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
 </head>
 
 <!-- return false Tidak bisa klik kanan, ctrl A & C -->
@@ -61,7 +61,8 @@
   <div class="jumbotron text-center">
     <img src="img/I'm.png" class="img-square">
     <h1>Ramadhan Muhamad Taufiq</h1>
-    <p>Freelancer | Programmer | Web Developer & Designer</p>
+    <!-- <p id="role">Freelancer | Programmer | Web Developer & Designer</p> -->
+    <div class="text-3">And I'm a <span class="typing"></span></div>
   </div>
 
   <!-- About -->
@@ -75,7 +76,7 @@
       </div>
 
       <div class="row">
-        <div class="col-sm-5 col-sm-offset-1">
+        <div class="col-sm-5 col-sm-offset-1" data-aos="fade-right" data-aos-delay="100">
           <p class="pKiri">Perkenalkan saya Ramadhan Muhamad Taufiq, saya sangat menyukai dunia IT, dan saya
             berkeinginan untuk memajukan indonesia di bidang IT karena seiring perkembangan zaman dunia IT semakin pesat
             dan tentunya semakin dibutuhkan. Saya ingin terus mendalami Teknologi Informasi agar saya dapat menciptakan
@@ -83,7 +84,7 @@
             dan membuat aplikasi, serta saya juga menyukai editing serta desain. Dan saya akan membuka usaha sendiri
             dalam bidang IT</p>
         </div>
-        <div class="col-sm-5">
+        <div class="col-sm-5" data-aos="fade-left" data-aos-delay="100">
           <p class="pKanan">Saya sangat bersemangat dalam membuat konten ini karena saya sangat suka mendesain website,
             dan saya juga telah membuat Web profil yang semoga nantinya web profil tersebut dapat berguna untuk CV saya
             yang bisa untuk mendaftar di suatu perusahaan melalui web profil yang telah saya buat yakni Web Profil Cv.
@@ -92,7 +93,8 @@
             ingin saya amalkan dengan cara yang baik.</p>
         </div>
       </div>
-      <a class="btn" id="cv" href="img/Ramadhan Muhamad Taufiq-resume.pdf">Download CV</a>
+      <a class="btn" id="cv" href="img/Ramadhan Muhamad Taufiq-resume.pdf" data-aos="fade-up"
+        data-aos-delay="100">Download CV</a>
       <!-- <a class="btn" href="img/Ramadhan Muhamad Taufiq-resume.pdf" download="CV_Ramadhan_Muhamad_Taufiq.pdf"
         onclick="return false;">Download CV</a> -->
       <!-- <a class="btn" href="#" onclick="return false;"
@@ -107,7 +109,7 @@
       <h1 class="col-sm-12 text-center">Portfolio</h1>
       <hr>
       <div class="row">
-        <div class="portfolio-container" data-aos="fade-in">
+        <div class="portfolio-container" data-aos="fade-up" data-aos-delay="100">
           <div class="col-lg-4 col-md-6 portfolio-thumbnail">
             <a class="popup-img1" href="img/Apkprofilhimatif.jpeg">
               <img src="img/Apkprofilhimatif.jpeg" alt="img" style="width: 300px; height: 350px;">
@@ -410,6 +412,11 @@
     </script>
 
   <!-- End Java -->
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="js/jquery-3.5.1.min.js"></script>

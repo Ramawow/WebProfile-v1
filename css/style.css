@@ -41,7 +41,10 @@ body {
 }
 
 .jumbotron img {
-    width: 200px;
+    width: 100%;
+    /* Lebar 100% agar responsif */
+    max-width: 200px;
+    /* Batas maksimal lebar */
     border-bottom: 3px solid #ffffff;
 }
 
@@ -50,15 +53,27 @@ body {
     color: #ffffff;
 }
 
+.jumbotron .text-3 {
+    font-size: 40px;
+    margin: 5px 0;
+    color: #ffffff;
+}
+
+.jumbotron .text-3 span {
+    color: coral;
+    font-weight: 600;
+}
+
 hr {
     width: 250px;
     border-top: 2px solid #999;
 }
 
+
 /* Mobile 476/576/768 */
 @media (max-width: 728px) {
     .jumbotron img {
-        width: 150px;
+        width: 110px;
     }
 }
 
@@ -163,6 +178,17 @@ hr {
 .portfolio-thumbnail:hover {
     transform: scale(1.05);
     /* Efek perbesar saat hover */
+}
+
+/* Mobile 476/576/768 */
+@media (max-width: 728px) {
+    #portfolio .portfolio-container {
+        /* utk text */
+        /* text-align: center;  */
+        /* utk gambar */
+        justify-content: center;
+
+    }
 }
 
 
