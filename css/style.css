@@ -2,34 +2,144 @@ html {
     position: relative;
 }
 
+/* ===== Colours ===== */
+:root {
+    --body-color: #E4E9F7;
+    --nav-color: #4070F4;
+    --side-nav: #010718;
+    --text-color: #FFF;
+    --search-bar: #F2F2F2;
+    --search-text: #010718;
+}
+
 body {
     margin-bottom: 50px;
     margin-top: 50px;
+    background-color: var(--body-color);
 }
 
-.navbar-default .navbar-toggle .icon-bar {
+body.dark {
+    background-color: #333;
+    /* Ganti dengan warna latar belakang dark mode yang diinginkan */
+    color: #fff;
+    /* Ganti dengan warna teks yang diinginkan pada dark mode */
+    --body-color: #18191A;
+    --nav-color: #242526;
+    --side-nav: #242526;
+    --text-color: #CCC;
+    --search-bar: #242526;
+}
+
+.language-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    cursor: pointer;
+    font-weight: bold;
+    color: #333;
+}
+
+.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 60px;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.dark-mode-icon {
+    width: 30px;
+    height: 30px;
+    background: url('/img/R.ico') center center no-repeat;
+    background-size: cover;
+    display: inline-block;
+}
+
+.navbar-default .darkLight-searchBox {
+    display: flex;
+    align-items: center;
+    margin-top: 4%;
+}
+
+.darkLight-searchBox .dark-light,
+.darkLight-searchBox .searchToggle {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+}
+
+.dark-light i,
+.searchToggle i {
+    position: absolute;
+    color: var(--text-color);
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dark-light i.sun {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.dark-light.active i.sun {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.dark-light.active i.moon {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+/* .navbar-default .navbar-toggle .icon-bar {
+    background-color: #3b9cff;
+} */
+
+
+body.dark nav {
+    border: 1px solid #393838;
+    background-color: #000;
+}
+
+.navbar-default {
     background-color: #3b9cff;
 }
 
 .navbar-default .navbar-brand {
-    color: #3b9cff;
+    color: #fff;
     padding-top: 15px;
     padding-left: 30px;
-
 }
 
 .navbar-default .navbar-brand:hover {
-    color: #0066ff;
+    color: #F0EDCF;
+
 }
 
 .navbar-default .navbar-nav li a {
-    color: #3b9cff;
-
+    color: #fff;
 }
 
 .navbar-default .navbar-nav li a:hover {
-    color: #0066ff;
-    border-bottom: 2px solid #0066ff;
+    color: #F0EDCF;
+    border-bottom: 2px solid #fff;
+}
+
+/* Mobile 476/576/768 */
+@media (max-width: 728px) {
+    .navbar-default .darkLight-searchBox {
+        margin-top: 1%;
+    }
+
+    .navbar-default .navbar-toggle .icon-bar {
+        background-color: #fff;
+    }
 }
 
 .jumbotron {

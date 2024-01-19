@@ -14,6 +14,57 @@ $('.page-scroll').on('click', function (e) {
 
 });
 
+const body = document.querySelector("body"),
+	nav = document.querySelector("nav"),
+	modeToggle = document.querySelector(".dark-light"),
+	searchToggle = document.querySelector(".searchToggle"),
+	sidebarOpen = document.querySelector(".sidebarOpen"),
+	siderbarClose = document.querySelector(".siderbarClose");
+
+let getMode = localStorage.getItem("mode");
+if (getMode && getMode === "dark-mode") {
+	body.classList.add("dark");
+}
+
+// js code to toggle dark and light mode
+modeToggle.addEventListener("click", () => {
+	modeToggle.classList.toggle("active");
+	body.classList.toggle("dark");
+
+	// js code to keep user selected mode even page refresh or file reopen
+	if (!body.classList.contains("dark")) {
+		localStorage.setItem("mode", "light-mode");
+	} else {
+		localStorage.setItem("mode", "dark-mode");
+	}
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+	const translateId = document.getElementById('translate-id');
+	const translateEn = document.getElementById('translate-en');
+	const darkModeToggle = document.getElementById('dark-mode-toggle');
+	const body = document.body;
+
+	translateId.addEventListener('click', function () {
+		body.setAttribute('lang', 'id'); // Set atribut lang ke 'id' untuk Bahasa Indonesia
+		alert('Translate to Bahasa Indonesia');
+	});
+
+	translateEn.addEventListener('click', function () {
+		body.setAttribute('lang', 'en'); // Set atribut lang ke 'en' untuk Bahasa Inggris
+		alert('Translate to English');
+	});
+
+	darkModeToggle.addEventListener('click', function () {
+		body.classList.toggle('dark-mode'); // Toggle class dark mode
+		// Tambahkan logika untuk mengaktifkan/dematikan dark mode
+		alert('Toggle Dark Mode');
+	});
+});
+
+
 // Automatic text
 document.addEventListener('DOMContentLoaded', function () {
 	var options = {
