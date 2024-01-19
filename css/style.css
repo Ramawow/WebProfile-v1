@@ -55,12 +55,30 @@ hr {
     border-top: 2px solid #999;
 }
 
+/* Mobile 476/576/768 */
+@media (max-width: 728px) {
+    .jumbotron img {
+        width: 150px;
+    }
+}
+
+/* About */
+.about #cv {
+    margin-top: 30px;
+}
+
+/* Mobile 476/576/768 */
+@media (max-width: 728px) {
+    .about #cv {
+        margin-left: 30%;
+    }
+}
 
 /* Portfolio */
 
 .portfolio {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 20px;
+    margin-bottom: -60px;
 }
 
 .portfolio h1 {
@@ -229,18 +247,80 @@ hr {
     opacity: 1;
 }
 
-footer {
-    position: absolute;
-    height: 50px;
-    width: 100%;
-    bottom: 0;
-    background-color: #000;
-    padding-top: 10px;
+/* Skill*/
+.skill {
+    padding: 20px;
+    /* Atur padding agar lebih enak dilihat */
 }
 
-footer p {
-    color: #4ba3ff;
+/* Mobile 476/576/768 */
+@media (max-width: 728px) {
+    .skill {
+        padding: 20px;
+        /* Atur padding agar lebih enak dilihat */
+        overflow-y: hidden;
+    }
+
+    .progress-bar {
+        width: unset;
+        /* Hapus min-width agar responsif */
+        animation: progress-animation 3s ease-out;
+        /* Tambahkan animasi */
+    }
 }
+
+/* Tambahkan animasi */
+@keyframes progress-animation {
+    from {
+        width: 0;
+    }
+}
+
+/* work exp*/
+
+.workexp {
+    background-color: #3b9cff;
+    min-height: 500px;
+    color: #fff;
+}
+
+.hr {
+    border-top: 2px solid #fff;
+}
+
+.services-box {
+    background: #fff;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.services-box span {
+    color: #088dff;
+    margin: 5px;
+    margin-top: 20px;
+    margin-left: 15px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.services-box p {
+    font-size: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 10px;
+    color: #3b9cff;
+    text-align: justify;
+}
+
+/* Mobile 476/576/768 */
+@media (max-width: 728px) {
+    .workexp {
+        padding-bottom: 10%;
+    }
+}
+
+/* Contact */
 
 .contact .col-sm-4 span {
     padding: 10px;
@@ -279,6 +359,10 @@ footer p {
 .logo {
     padding-top: 27px;
     justify-content: center;
+}
+
+.logo .icofont {
+    font-size: x-large;
 }
 
 .contact a {
@@ -355,42 +439,12 @@ footer p {
     color: #fff;
 }
 
-
-/* work exp*/
-
-.workexp {
-    background-color: #3b9cff;
-    min-height: 500px;
-    color: #fff;
-}
-
-.hr {
-    border-top: 2px solid #fff;
-}
-
-.services-box {
-    background: #fff;
-    padding: 15px;
-    margin-top: 20px;
-    border-radius: 10px;
-}
-
-.services-box span {
-    color: #088dff;
-    margin: 5px;
-    margin-top: 20px;
-    margin-left: 15px;
-    font-size: 20px;
-    font-weight: 600;
-}
-
-.services-box p {
-    font-size: 15px;
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-top: 10px;
-    color: #3b9cff;
-    text-align: justify;
+/* Mobile 476/576/768 */
+@media (max-width: 728px) {
+    .contact a .icofont {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
 }
 
 /*gmaps*/
@@ -406,6 +460,60 @@ footer p {
 .box iframe {
     padding-top: 10px;
     padding-bottom: 20px;
-    width: 50vw;
-    height: 30vw;
+    width: 80vw;
+    height: 40vw;
+}
+
+/* footer */
+
+footer {
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    bottom: 0;
+    background-color: #000;
+    padding-top: 10px;
+}
+
+footer p {
+    color: #4ba3ff;
+}
+
+/* Mobile 476/576/768 */
+
+@media screen and (max-width: 576px) {
+    #navbarNav {
+        background-color: transparent;
+        backdrop-filter: blur(5px);
+        border: 1px solid white;
+        border-radius: 20px;
+        margin-top: 5%;
+        padding: 5% 0;
+    }
+}
+
+/* Tablet 768-1024 min = minimal ke atas*/
+@media (min-width: 728px) {
+    .navbar-nav a::after {
+        width: 10%;
+    }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    #navbarNav {
+        background-color: transparent;
+        backdrop-filter: blur(5px);
+        border: 1px solid white;
+        border-radius: 20px;
+        margin-top: 5%;
+        padding: 5% 0;
+    }
+}
+
+/* Dekstop */
+@media (min-width: 1200px) {
+    .navbar-nav a::after {
+        width: 100%;
+    }
 }
