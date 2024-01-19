@@ -73,6 +73,38 @@ $(window).scroll(function () {
 
 });
 
+/**
+   * Animation on scroll
+   */
+window.addEventListener('load', () => {
+	AOS.init({
+		duration: 2000,
+		easing: 'ease-in-out',
+		once: true,
+		mirror: false
+	})
+});
+
+/**
+   * Preloader
+   */
+var preloader = document.getElementById('preloader');
+
+window.addEventListener('load', function () {
+	preloader.style.display = "none";
+})
+
+/**
+   * Back to top button
+   */
+const backtotop = document.querySelector('.back-to-top');
+window.addEventListener('scroll', () => {
+	if (window.pageYOffset > 100) {
+		backtotop.classList.add('active');
+	} else {
+		backtotop.classList.remove('active');
+	}
+})
 
 
 

@@ -78,6 +78,10 @@ hr {
 }
 
 /* About */
+.about {
+    text-align: justify;
+}
+
 .about #cv {
     margin-top: 30px;
 }
@@ -306,8 +310,10 @@ hr {
 
 .workexp {
     background-color: #3b9cff;
-    min-height: 500px;
+    min-height: 700px;
     color: #fff;
+    animation: fadeIn 1s ease-in-out;
+    /* Menambahkan animasi fadeIn */
 }
 
 .hr {
@@ -319,6 +325,13 @@ hr {
     padding: 15px;
     margin-top: 20px;
     border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    /* Menambahkan animasi saat hover */
+}
+
+.services-box:hover {
+    transform: scale(1.05);
+    /* Memberikan efek scaling saat hover */
 }
 
 .services-box span {
@@ -335,7 +348,7 @@ hr {
     margin-left: 15px;
     margin-right: 15px;
     margin-top: 10px;
-    color: #3b9cff;
+    color: #000;
     text-align: justify;
 }
 
@@ -492,7 +505,7 @@ hr {
 
 /* footer */
 
-footer {
+/* footer {
     position: absolute;
     height: 50px;
     width: 100%;
@@ -503,6 +516,120 @@ footer {
 
 footer p {
     color: #4ba3ff;
+} */
+
+footer {
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    bottom: 0;
+    padding-top: 15px;
+    text-align: center;
+    background-color: rgb(10, 10, 10);
+    color: rgb(241, 239, 239);
+    font-weight: 400;
+    /* padding: 8px; */
+}
+
+footer a {
+    color: #5fcf80;
+    text-decoration: none;
+}
+
+
+footer a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    overflow: hidden;
+    background: #fff;
+}
+
+#preloader:before {
+    content: "";
+    position: fixed;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+    border: 6px solid #5fcf80;
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    -webkit-animation: animate-preloader 1s linear infinite;
+    animation: animate-preloader 1s linear infinite;
+}
+
+@-webkit-keyframes animate-preloader {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate-preloader {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*--------------------------------------------------------------
+  # Back to top button
+  --------------------------------------------------------------*/
+.back-to-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 2%;
+    bottom: 3%;
+    z-index: 996;
+    background: #5fcf80;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    transition: all 0.4s;
+    padding: 6px;
+}
+
+.back-to-top i {
+    font-size: 28px;
+    color: #fff;
+    line-height: 0;
+}
+
+.back-to-top:hover {
+    background: #7ed899;
+    color: #fff;
+}
+
+.back-to-top.active {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+@media (max-width: 600px) {
+    .back-to-top {
+        bottom: 7%;
+    }
 }
 
 /* Mobile 476/576/768 */
