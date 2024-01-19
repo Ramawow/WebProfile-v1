@@ -44,24 +44,41 @@ modeToggle.addEventListener("click", () => {
 document.addEventListener('DOMContentLoaded', function () {
 	const translateId = document.getElementById('translate-id');
 	const translateEn = document.getElementById('translate-en');
-	const darkModeToggle = document.getElementById('dark-mode-toggle');
+	// const darkModeToggle = document.getElementById('dark-mode-toggle');
 	const body = document.body;
 
+	function translateContent(lang) {
+		body.setAttribute('lang', lang); // Atur atribut lang
+
+		// Terjemahkan setiap elemen dengan atribut data-translate-id atau data-translate-en
+		document.querySelectorAll('[data-translate-id], [data-translate-en]').forEach(element => {
+			const translationKey = `data-translate-${lang}`;
+			element.innerText = element.getAttribute(translationKey);
+		});
+
+		// Ganti teks pada tombol Download CV
+		const cvButton = document.getElementById('cv, content');
+		const cvButtonText = lang === 'id' ? 'Unduh CV' : 'Download CV';
+		cvButton.innerText = cvButtonText;
+	}
+
 	translateId.addEventListener('click', function () {
-		body.setAttribute('lang', 'id'); // Set atribut lang ke 'id' untuk Bahasa Indonesia
+		translateContent('id');
 		alert('Translate to Bahasa Indonesia');
 	});
 
 	translateEn.addEventListener('click', function () {
-		body.setAttribute('lang', 'en'); // Set atribut lang ke 'en' untuk Bahasa Inggris
+		translateContent('en');
 		alert('Translate to English');
 	});
 
-	darkModeToggle.addEventListener('click', function () {
-		body.classList.toggle('dark-mode'); // Toggle class dark mode
-		// Tambahkan logika untuk mengaktifkan/dematikan dark mode
-		alert('Toggle Dark Mode');
-	});
+	// Toggle class dark mode
+	// Tambahkan logika untuk mengaktifkan/dematikan dark mode
+	// darkModeToggle.addEventListener('click', function () {
+	// 	body.classList.toggle('dark-mode'); 
+
+	// 	alert('Toggle Dark Mode');
+	// });
 });
 
 
