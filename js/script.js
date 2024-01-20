@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 
 		// Ganti teks pada tombol Download CV
-		const cvButton = document.getElementById('cv, content');
+		const cvButton = document.getElementById('cv');
 		const cvButtonText = lang === 'id' ? 'Unduh CV' : 'Download CV';
 		cvButton.innerText = cvButtonText;
 	}
