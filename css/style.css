@@ -493,6 +493,14 @@ hr {
     bottom: calc(50% - 50px);
 }
 
+/* Mobile 476/576/768 */
+
+@media screen and (max-width: 576px) {
+    .portfolio .portfolio-wrap {
+        left: 7%;
+    }
+}
+
 
 /* Certificate */
 
@@ -784,6 +792,13 @@ hr {
     }
 }
 
+/* Mobile 476/576/768 */
+@media (max-width: 728px) {
+    .contact a .icofont {
+        margin: 30px auto;
+    }
+}
+
 /*gmaps*/
 .gmap {
     display: flex;
@@ -799,6 +814,15 @@ hr {
     padding-bottom: 20px;
     width: 80vw;
     height: 40vw;
+}
+
+/* Mobile 476/576/768 */
+
+@media screen and (max-width: 576px) {
+    .box iframe {
+        width: 90vw;
+        margin-left: 2%;
+    }
 }
 
 /* footer */
