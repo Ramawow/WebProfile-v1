@@ -143,6 +143,7 @@ body.dark nav {
 .navbar-default .navbar-nav li a:hover {
     color: #F0EDCF;
     border-bottom: 2px solid #fff;
+    padding-bottom: 5px;
 }
 
 /* Mobile 476/576/768 */
