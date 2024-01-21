@@ -787,17 +787,11 @@ hr {
 /* Mobile 476/576/768 */
 @media (max-width: 728px) {
     .contact a .icofont {
-        margin-left: 8px;
-        margin-right: 8px;
-    }
-}
-
-/* Mobile 476/576/768 */
-@media (max-width: 728px) {
-    .contact a .icofont {
         margin: 30px auto;
     }
 }
+
+
 
 /*gmaps*/
 .gmap {
