@@ -491,7 +491,7 @@ hr {
 
 .portfolio .portfolio-wrap:hover .portfolio-links {
     opacity: 1;
-    bottom: calc(50% - 50px);
+    bottom: calc(50% - 60px);
 }
 
 /* Mobile 476/576/768 */
