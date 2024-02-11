@@ -116,19 +116,21 @@
                     <div class="portfolio-details-slider swiper">
                         <div class="swiper-wrapper align-items-center">
 
-                            <div class="swiper-slide">
+                            <div class="swiper-slide active">
                                 <img src="img/portfolio.png" alt="">
                             </div>
 
-                            <div class="swiper-slide">
-                                <img src="img/Pendidikan.png" alt="">
+                            <div class="swiper-slide" style="height: 300px;">
+                                <img src="img/portfolio-mockup.png" alt="">
                             </div>
 
-                            <div class="swiper-slide">
-                                <img src="img/wisata-selo.png" alt="">
+                            <div class="swiper-slide" style="height: 300px;">
+                                <img src="img/tablet-portfolio.png" alt="">
                             </div>
 
                         </div>
+                        <button class="prev" onclick="prevSlide()">&#10094;</button>
+                        <button class="next" onclick="nextSlide()">&#10095;</button>
                         <div class="swiper-pagination"></div>
                     </div>
                 </div>
@@ -215,6 +217,33 @@
         document.addEventListener('DOMContentLoaded', function () {
             baguetteBox.run('.portfolio-container');
         });
+    </script>
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.swiper-slide');
+
+        function showSlide(n) {
+            slides.forEach(slide => slide.style.display = 'none');
+            slideIndex = (n + slides.length) % slides.length;
+            slides[slideIndex].style.display = 'block';
+        }
+
+        function nextSlide() {
+            showSlide(slideIndex + 1);
+        }
+
+        function prevSlide() {
+            showSlide(slideIndex - 1);
+        }
+
+        function autoSlide() {
+            nextSlide();
+            setTimeout(autoSlide, 3000); // Change slide every 3 seconds
+        }
+
+        autoSlide(); // Start automatic sliding
+
+
     </script>
 
 
