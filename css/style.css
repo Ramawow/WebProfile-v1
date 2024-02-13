@@ -161,12 +161,50 @@ body.dark nav {
     }
 }
 
-.jumbotron {
+/* .jumbotron {
     background-image: url('../img/lu.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-position: 0 -100px;
     overflow: hidden;
+} */
+
+.jumbotron {
+    background: #353353;
+    padding: 0;
+    height: 100vh;
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 0 -100px;
+    overflow: hidden;
+}
+
+.intro {
+    margin: auto;
+    max-width: 540px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.intro h1 {
+    color: #FFF;
+    font-size: 36px;
+}
+
+.intro span {
+    color: #FFF;
+    font-size: 16px;
+}
+
+.intro h1 {
+    color: #282642;
+    text-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #fff;
+}
+
+.intro span {
+    color: #454360;
 }
 
 .jumbotron img {
@@ -198,6 +236,231 @@ hr {
     border-top: 2px solid #999;
 }
 
+
+/*=================================================================*/
+/*                      PARALLAX SHAPES                          */
+/*=================================================================*/
+.parallax {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 12%;
+    width: 100%;
+}
+
+.parallax .layer {
+    position: absolute;
+}
+
+.parallax .p1 {
+    left: 10%;
+    top: 10%;
+}
+
+.parallax .p2 {
+    left: 25%;
+    top: 30%;
+}
+
+.parallax .p3 {
+    left: 15%;
+    bottom: 30%;
+}
+
+.parallax .p4 {
+    left: 10%;
+    bottom: 10%;
+}
+
+.parallax .p5 {
+    left: 45%;
+    top: 10%;
+}
+
+.parallax .p6 {
+    left: 40%;
+    bottom: 10%;
+}
+
+.parallax .p7 {
+    top: 20%;
+    right: 30%;
+}
+
+.parallax .p8 {
+    right: 30%;
+    bottom: 20%;
+}
+
+.parallax .p9 {
+    right: 10%;
+    top: 10%;
+}
+
+.parallax .p10 {
+    top: 45%;
+    right: 20%;
+}
+
+.parallax .p11 {
+    bottom: 10%;
+    right: 10%;
+}
+
+@media only screen and (max-width: 576px) {
+    .parallax .p1 {
+        left: 10%;
+        top: 10%;
+    }
+
+    .parallax .p2 {
+        left: 15%;
+        top: 30%;
+    }
+
+    .parallax .p3 {
+        left: 10%;
+        bottom: 30%;
+    }
+
+    .parallax .p4 {
+        left: 10%;
+        bottom: 10%;
+    }
+
+    .parallax .p5 {
+        left: 45%;
+        top: 3%;
+    }
+
+    .parallax .p6 {
+        left: 40%;
+        bottom: 10%;
+    }
+
+    .parallax .p7 {
+        top: 20%;
+        right: 30%;
+    }
+
+    .parallax .p8 {
+        right: 30%;
+        bottom: 20%;
+    }
+
+    .parallax .p9 {
+        right: 10%;
+        top: 5%;
+    }
+
+    .parallax .p10 {
+        top: 45%;
+        right: 10%;
+    }
+
+    .parallax .p11 {
+        bottom: 10%;
+        right: 10%;
+    }
+}
+
+.scroll-down {
+    position: absolute;
+    top: 520px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.scroll-down.light span {
+    color: #fff;
+}
+
+.scroll-down.light .mouse {
+    border-color: #fff;
+}
+
+.scroll-down.light .mouse .wheel {
+    background: #fff;
+}
+
+@-webkit-keyframes ani-mouse {
+    0% {
+        top: 29%;
+    }
+
+    15% {
+        top: 50%;
+    }
+
+    50% {
+        top: 50%;
+    }
+
+    100% {
+        top: 29%;
+    }
+}
+
+@keyframes ani-mouse {
+    0% {
+        top: 29%;
+    }
+
+    15% {
+        top: 50%;
+    }
+
+    50% {
+        top: 50%;
+    }
+
+    100% {
+        top: 29%;
+    }
+}
+
+.mouse-wrapper {
+    color: #FFF;
+    font-size: 14px;
+    display: block;
+    max-width: 100px;
+    margin: auto;
+    text-align: center;
+}
+
+.mouse-wrapper:hover {
+    color: #FFF;
+    list-style: none;
+    text-decoration: none;
+}
+
+.mouse {
+    border: solid 2px #FFF;
+    border-radius: 16px;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    height: 26px;
+    position: relative;
+    width: 20px;
+}
+
+.mouse .wheel {
+    background: #e0e5ec;
+    border-radius: 100%;
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 4px;
+    width: 4px;
+    -webkit-animation: ani-mouse 2s linear infinite;
+    animation: ani-mouse 2s linear infinite;
+}
 
 /* Mobile 476/576/768 */
 @media (max-width: 728px) {
