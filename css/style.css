@@ -210,7 +210,7 @@ body.dark nav {
 .jumbotron img {
     width: 100%;
     /* Lebar 100% agar responsif */
-    max-width: 200px;
+    max-width: 180px;
     /* Batas maksimal lebar */
     border-bottom: 3px solid #ffffff;
 }
@@ -229,6 +229,7 @@ body.dark nav {
 .jumbotron .text-3 span {
     color: coral;
     font-weight: 600;
+    font-size: 40px;
 }
 
 hr {
@@ -236,6 +237,72 @@ hr {
     border-top: 2px solid #999;
 }
 
+.social-icons {
+    padding-top: 5px;
+    justify-content: center;
+    margin-bottom: 3%;
+}
+
+.social-icons li a .icofont-twitter,
+.icofont-facebook,
+.icofont-instagram,
+.icofont-youtube,
+.icofont-blogger,
+.icofont-whatsapp,
+.icofont-telegram {
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    /* line-height: inherit; */
+    padding: 5px;
+    margin: 0 5px;
+    /* Menggunakan shorthand margin untuk pengaturan margin kiri dan kanan */
+    font-size: 20px;
+    /* Menggunakan ukuran font yang lebih umum */
+    text-decoration: none;
+}
+
+.social-icons li a .icofont-twitter:hover {
+    border: 2px solid #1DA1F2;
+    background: #1DA1F2;
+    color: #fff;
+}
+
+.social-icons li a .icofont-facebook:hover {
+    border: 2px solid #4267B2;
+    background: #4267B2;
+    color: #fff;
+}
+
+.social-icons li a .icofont-instagram:hover {
+    border: 2px solid #C13584;
+    background: #C13584;
+    color: #fff;
+}
+
+.social-icons li a .icofont-youtube:hover {
+    border: 2px solid #e60e0e;
+    background: #ec0505;
+    color: #fff;
+}
+
+.social-icons li a .icofont-blogger:hover {
+    border: 2px solid #f54b08;
+    background: #f34905;
+    color: #fff;
+}
+
+.social-icons li a .icofont-whatsapp:hover {
+    border: 2px solid #fff;
+    background: #0bc524;
+    color: #fff;
+}
+
+.social-icons li a .icofont-telegram:hover {
+    border: 2px solid #1DA1F2;
+    background: #1DA1F2;
+    color: #fff;
+}
 
 /*=================================================================*/
 /*                      PARALLAX SHAPES                          */
@@ -469,12 +536,28 @@ hr {
         min-height: 85vh;
     }
 
+    .jumbotron .text-3 {
+        font-size: 25px;
+    }
+
+    .jumbotron .text-3 span {
+        font-size: 25px;
+    }
+
     .jumbotron img {
         width: 110px;
     }
 
+    .intro h1 {
+        font-size: 25px;
+    }
+
+    .social-icons {
+        margin: 5%;
+    }
+
     .scroll-down {
-        top: 400px;
+        top: 450px;
     }
 
     .parallax {
@@ -980,7 +1063,7 @@ hr {
     font-size: 23px;
 }
 
-.follow {
+/* .follow {
     padding-top: 40px;
 }
 
@@ -1066,7 +1149,7 @@ hr {
     border: 2px solid #1DA1F2;
     background: #1DA1F2;
     color: #fff;
-}
+} */
 
 /* Mobile 476/576/768 */
 @media (max-width: 728px) {
@@ -1076,6 +1159,108 @@ hr {
 }
 
 
+/* === Form Control === */
+.form-control {
+    display: block;
+    border-radius: 30px;
+    width: 100%;
+    height: 60px;
+    padding: 10px 30px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #454360;
+    background-color: #e0e5ec;
+    background-image: none;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.form-control:focus {
+    outline: 0;
+    background: #e0e5ec;
+
+}
+
+.form-control::-webkit-input-placeholder {
+    /* Edge */
+    color: #AEACCA;
+}
+
+.form-control:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #AEACCA;
+}
+
+.form-control::-moz-placeholder {
+    color: #AEACCA;
+}
+
+.form-control::-ms-input-placeholder {
+    color: #AEACCA;
+}
+
+.form-control::placeholder {
+    color: #AEACCA;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+.input-group-addon {
+    padding: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    color: #555;
+    text-align: center;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+}
+
+.btn-default {
+    color: #FFF;
+    background: #3b9cff;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    margin-bottom: 50px;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001, inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001, inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001;
+}
+
+.btn-default:hover {
+    background: #FF4C60;
+    color: #FFF;
+    -webkit-animation-name: button-push;
+    animation-name: button-push;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+
+/* === Alert === */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+}
+
+.alert-dismissable .close,
+.alert-dismissible .close {
+    position: relative;
+    top: 0;
+    right: 0;
+    color: inherit;
+}
 
 /*gmaps*/
 .gmap {
