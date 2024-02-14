@@ -121,11 +121,11 @@ $(window).scroll(function () {
 
 
 	// portofolio
-	if (wScroll > $('.portofolio').offset().top - 250) {
-		$('.portofolio .thumbnail').each(function (i) {
+	if (wScroll > $('.portfolio').offset().top - 250) {
+		$('.portfolio-item').each(function (i) {
 			setTimeout(function () {
-				$('.portofolio .thumbnail').eq(i).addClass('muncul');
-				$('.portofolio h4').eq(i).addClass('muncul');
+				$('.portfolio-item').eq(i).addClass('muncul');
+				$('.portfolio-item h4').eq(i).addClass('muncul');
 			}, 400 * (i + 1));
 		});
 	}

@@ -320,22 +320,22 @@ hr {
 
     .parallax .p3 {
         left: 10%;
-        bottom: 30%;
+        bottom: 45%;
     }
 
     .parallax .p4 {
         left: 10%;
-        bottom: 10%;
+        bottom: 25%;
     }
 
     .parallax .p5 {
-        left: 45%;
-        top: 3%;
+        left: 40%;
+        top: 10%;
     }
 
     .parallax .p6 {
         left: 40%;
-        bottom: 10%;
+        bottom: 25%;
     }
 
     .parallax .p7 {
@@ -344,13 +344,13 @@ hr {
     }
 
     .parallax .p8 {
-        right: 30%;
-        bottom: 20%;
+        right: 25%;
+        bottom: 40%;
     }
 
     .parallax .p9 {
         right: 10%;
-        top: 5%;
+        top: 10%;
     }
 
     .parallax .p10 {
@@ -359,7 +359,7 @@ hr {
     }
 
     .parallax .p11 {
-        bottom: 10%;
+        bottom: 25%;
         right: 10%;
     }
 }
@@ -464,14 +464,29 @@ hr {
 
 /* Mobile 476/576/768 */
 @media (max-width: 728px) {
+    .jumbotron {
+        height: 85vh;
+        min-height: 85vh;
+    }
+
     .jumbotron img {
         width: 110px;
+    }
+
+    .scroll-down {
+        top: 400px;
+    }
+
+    .parallax {
+        height: 7%;
     }
 }
 
 /* About */
 .about {
     text-align: justify;
+    padding-top: 30px;
+    margin-top: -50px;
 }
 
 .about #cv {
@@ -488,7 +503,7 @@ hr {
 /* Portfolio */
 
 .portfolio {
-    padding-top: 20px;
+    padding-top: 30px;
     margin-bottom: -60px;
 }
 
@@ -849,7 +864,7 @@ hr {
 
 /* Skill*/
 .skill {
-    padding: 20px;
+    padding: 30px;
     /* Atur padding agar lebih enak dilihat */
 }
 
@@ -879,8 +894,9 @@ hr {
 /* work exp*/
 
 .workexp {
+    padding-top: 30px;
     background-color: #3b9cff;
-    min-height: 700px;
+    min-height: 750px;
     color: #fff;
     animation: fadeIn 1s ease-in-out;
     /* Menambahkan animasi fadeIn */
@@ -930,6 +946,9 @@ hr {
 }
 
 /* Contact */
+.contact {
+    padding-top: 30px;
+}
 
 .contact .col-sm-4 span {
     padding: 10px;
