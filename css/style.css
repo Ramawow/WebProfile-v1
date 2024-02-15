@@ -138,12 +138,32 @@ body.dark nav {
 
 .navbar-default .navbar-nav li a {
     color: #fff;
+    display: inline-block;
+    /* Tambahkan properti display: inline-block; */
+    position: relative;
+    /* Tambahkan properti position: relative; */
 }
 
-.navbar-default .navbar-nav li a:hover {
+.navbar-default .navbar-nav li a:hover,
+.navbar-default .navbar-nav li a.active {
     color: #F0EDCF;
-    border-bottom: 2px solid #fff;
-    padding-bottom: 5px;
+}
+
+.navbar-default .navbar-nav li a:hover::after,
+.navbar-default .navbar-nav li a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    /* Pusatkan garis bawah */
+    transform: translateX(-50%);
+    width: 80%;
+    /* Sesuaikan lebar dengan teks */
+    height: 2px;
+    /* Sesuaikan tinggi garis */
+    background-color: #fff;
+    /* Warna garis */
+    animation: fadeIn 3s ease-in-out;
 }
 
 /* Mobile 476/576/768 */
@@ -159,6 +179,59 @@ body.dark nav {
     .navbar-default .navbar-nav li a:hover {
         width: 18%;
     }
+
+    .navbar-toggle {
+        border: none;
+        background: transparent !important;
+    }
+
+    .navbar-toggle .icon-bar {
+        background: #fff;
+        transition: all 0.3s;
+    }
+
+    .navbar-toggle .icon-bar.close-bar {
+        transform: rotate(45deg) translate(-2px, -1px);
+    }
+
+    .navbar-toggle .icon-bar.close-bar:nth-of-type(2) {
+        opacity: 0;
+    }
+
+    .navbar-toggle .icon-bar.close-bar:nth-of-type(3) {
+        transform: rotate(-45deg) translate(-3px, 3px);
+    }
+
+    /* animation */
+    .navbar-toggle:hover .icon-bar:nth-of-type(2) {
+        animation: wave 1s ease-out forwards;
+        animation-delay: 0.1s;
+    }
+
+    .navbar-toggle:hover .icon-bar:nth-of-type(3) {
+        animation: wave 1s ease-in-out forwards;
+        animation-delay: 0.2s;
+    }
+
+    .navbar-toggle:hover .icon-bar:nth-of-type(4) {
+        animation: wave 1s ease-in forwards;
+        animation-delay: 0.3s;
+    }
+
+    @keyframes wave {
+        0% {
+            transform: scaleX(1);
+        }
+
+        50% {
+            transform: scaleX(0.5);
+        }
+
+        100% {
+            transform: scaleX(1);
+        }
+    }
+
 }
 
 /* .jumbotron {
@@ -201,6 +274,16 @@ body.dark nav {
 .intro h1 {
     color: #282642;
     text-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #fff;
+}
+
+.intro .btn-default {
+    background-color: #3b9cff;
+    color: #fff;
+}
+
+.intro .btn-default:hover {
+    background-color: #FF4C60;
+    color: #fff;
 }
 
 .intro span {
@@ -554,6 +637,7 @@ hr {
 
     .social-icons {
         margin: 5%;
+        display: flex;
     }
 
     .scroll-down {
@@ -1252,6 +1336,52 @@ hr {
     border-radius: 0;
 }
 
+/* Responsive Form */
+@media (max-width: 768px) {
+    .contact-form .form-group {
+        margin-bottom: 20px;
+    }
+
+    .contact-form .form-group #InputEmail {
+        margin-left: 70px;
+    }
+
+    .contact-form .form-group #InputSubject {
+        margin-left: 70px;
+    }
+
+    .contact-form .form-group #InputMessage {
+        margin-left: 170px;
+    }
+
+    .contact-form .btn-default {
+        margin-left: 180px;
+    }
+}
+
+/* Responsive Form */
+@media (max-width: 576px) {
+    .contact-form .form-group #InputName {
+        margin-right: 20px;
+    }
+
+    .contact-form .form-group #InputEmail {
+        margin: auto;
+    }
+
+    .contact-form .form-group #InputSubject {
+        margin: auto;
+    }
+
+    .contact-form .form-group #InputMessage {
+        margin-left: 30px;
+    }
+
+    .contact-form .btn-default {
+        margin-left: 50px;
+    }
+}
+
 .btn-default {
     color: #FFF;
     background: #3b9cff;
@@ -1259,6 +1389,8 @@ hr {
     vertical-align: middle;
     position: relative;
     margin-bottom: 50px;
+    margin-top: 10px;
+    margin-left: auto;
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
     box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001, inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001, inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001;

@@ -1,17 +1,28 @@
-$('.page-scroll').on('click', function (e) {
+$(document).ready(function () {
+	// Tangkap semua elemen dengan kelas .page-scroll
+	$('.page-scroll').on('click', function (e) {
+		// Hilangkan kelas "active" dari semua elemen navbar
+		$('.page-scroll').removeClass('active');
+		// Tambahkan kelas "active" pada elemen navbar yang sedang di-klik
+		$(this).addClass('active');
 
-	//ambil isi href
-	var tujuan = $(this).attr('href');
-	//tangkap elemen ybs
-	var elemenTujuan = $(tujuan);
+		// Ambil nilai href
+		var tujuan = $(this).attr('href');
+		// Tangkap elemen tujuan
+		var elemenTujuan = $(tujuan);
 
-	//pindahkan scroll
-	$('html,body').animate({
-		scrollTop: elemenTujuan.offset().top - 50
-	}, 2000, 'easeInOutExpo');
+		// Pindahkan scroll
+		$('html,body').animate({
+			scrollTop: elemenTujuan.offset().top - 50
+		}, 2000, 'easeInOutExpo');
 
-	e.preventDefault();
+		e.preventDefault();
+	});
+});
 
+$('.navbar-toggle').on('click', function () {
+	$(this).toggleClass('active');
+	$('.icon-bar').toggleClass('close-bar');
 });
 
 const body = document.querySelector("body"),
@@ -161,6 +172,7 @@ var preloader = document.getElementById('preloader');
 window.addEventListener('load', function () {
 	preloader.style.display = "none";
 })
+
 
 /**
    * Back to top button
