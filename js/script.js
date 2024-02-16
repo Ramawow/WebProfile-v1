@@ -18,11 +18,49 @@ $(document).ready(function () {
 
 		e.preventDefault();
 	});
+
+	/**
+	 * Navbar links active state on scroll
+	 */
+	let navbarlinks = select('.navbar .page-scroll', true)
+	const navbarlinksActive = () => {
+		let position = window.scrollY + 200
+		navbarlinks.forEach(navbarlink => {
+			if (!navbarlink.hash) return
+			let section = select(navbarlink.hash)
+			if (!section) return
+			if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
+				navbarlink.classList.add('active')
+			} else {
+				navbarlink.classList.remove('active')
+			}
+		})
+	}
+	window.addEventListener('load', navbarlinksActive)
+	onscroll(document, navbarlinksActive)
 });
 
 $('.navbar-toggle').on('click', function () {
 	$(this).toggleClass('active');
 	$('.icon-bar').toggleClass('close-bar');
+});
+
+// Animate progress bars on scroll
+$(window).on('scroll', function () {
+	// Tangkap posisi scroll
+	var scrollTop = $(this).scrollTop();
+	// Tangkap posisi atas dan bawah elemen skill
+	var skillTop = $('#skill').offset().top - $(window).height();
+	var skillBottom = $('#skill').offset().top + $('#skill').outerHeight();
+
+	// Jika posisi scroll berada di antara posisi atas dan bawah elemen skill
+	if (scrollTop > skillTop && scrollTop < skillBottom) {
+		// Animate progress bars
+		$('.progress-bar').each(function () {
+			var progressValue = $(this).attr('aria-valuenow');
+			$(this).css('width', progressValue + '%');
+		});
+	}
 });
 
 const body = document.querySelector("body"),
