@@ -738,7 +738,7 @@ hr {
     margin-top: 30px;
 }
 
-.btn {
+#cv {
     margin-left: 450px;
     margin-top: 100px;
     width: 200px;
@@ -747,13 +747,31 @@ hr {
     color: #fff;
     background-color: #40A2D8;
     padding-top: 8px;
+    transition: all 0.5s;
 }
 
-.btn:hover {
-    background-color: #fff;
-    color: #40A2D8;
-    border: 2px solid #40A2D8;
-    border-radius: 20px;
+#cv::before {
+    content: "";
+    position: absolute;
+    /* left: 0;
+    top: 0;
+    height: 0;
+    width: 0; */
+    background-color: #FF4C60;
+    z-index: -1;
+    transition: width 3s ease;
+}
+
+#cv:hover::before {
+    width: 100%;
+}
+
+#cv:hover {
+    /* background-color: #fff; */
+    color: #fff;
+    background-color: #FF4C60;
+    /* border: 2px solid #40A2D8;
+    border-radius: 20px; */
 }
 
 /* Mobile 476/576/768 */

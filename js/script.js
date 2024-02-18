@@ -22,22 +22,22 @@ $(document).ready(function () {
 	/**
 	 * Navbar links active state on scroll
 	 */
-	let navbarlinks = select('.navbar .page-scroll', true)
+	let navbarlinks = document.querySelectorAll('.navbar .page-scroll');
 	const navbarlinksActive = () => {
-		let position = window.scrollY + 200
+		let position = window.scrollY + 200;
 		navbarlinks.forEach(navbarlink => {
-			if (!navbarlink.hash) return
-			let section = select(navbarlink.hash)
-			if (!section) return
+			if (!navbarlink.hash) return;
+			let section = document.querySelector(navbarlink.hash);
+			if (!section) return;
 			if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
-				navbarlink.classList.add('active')
+				navbarlink.classList.add('active');
 			} else {
-				navbarlink.classList.remove('active')
+				navbarlink.classList.remove('active');
 			}
-		})
-	}
-	window.addEventListener('load', navbarlinksActive)
-	onscroll(document, navbarlinksActive)
+		});
+	};
+	window.addEventListener('load', navbarlinksActive);
+	window.addEventListener('scroll', navbarlinksActive);
 });
 
 $('.navbar-toggle').on('click', function () {
