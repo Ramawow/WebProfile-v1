@@ -750,22 +750,6 @@ hr {
     transition: all 0.5s;
 }
 
-#cv::before {
-    content: "";
-    position: absolute;
-    /* left: 0;
-    top: 0;
-    height: 0;
-    width: 0; */
-    background-color: #FF4C60;
-    z-index: -1;
-    transition: width 3s ease;
-}
-
-#cv:hover::before {
-    width: 100%;
-}
-
 #cv:hover {
     /* background-color: #fff; */
     color: #fff;
@@ -1098,24 +1082,44 @@ hr {
     bottom: calc(50% - 60px);
 }
 
-.portfolio .wow {
-    margin-bottom: 50px;
+#moreportfolio {
+    margin-left: 330px;
+    margin-top: 20px;
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    color: #fff;
+    background-color: #40A2D8;
+    padding-top: 8px;
+    transition: all 0.5s;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
 }
 
-.portfolio .wow a {
-    text-decoration: none;
-    color: red;
+#moreportfolio:hover {
+    /* background-color: #fff; */
+    color: #fff;
+    background-color: #FF4C60;
+    /* border: 2px solid #40A2D8;
+    border-radius: 20px; */
 }
 
-.portfolio .wow a:hover {
-    color: #3b9cff;
-}
 
 /* Mobile 476/576/768 */
+@media screen and (max-width: 768px) {
+    #moreportfolio {
+        margin-left: 50px;
+    }
+}
 
 @media screen and (max-width: 576px) {
     .portfolio .portfolio-wrap {
         left: 7%;
+    }
+
+    #moreportfolio {
+        margin-left: 30px;
     }
 }
 
@@ -1206,6 +1210,20 @@ hr {
     padding: 30px;
     /* Atur padding agar lebih enak dilihat */
 }
+
+.skill .wow {
+    margin: 30px;
+}
+
+.skill .wow a {
+    text-decoration: none;
+    color: red;
+}
+
+.skill .wow a:hover {
+    color: #3b9cff;
+}
+
 
 /* Mobile 476/576/768 */
 @media (max-width: 728px) {
@@ -1755,7 +1773,7 @@ footer a:hover {
 --------------------------------------------------------------*/
 .breadcrumbs {
     padding: 15px 0;
-    background-color: #fcf2f7;
+    background-color: #f5f2f3;
     min-height: 40px;
 }
 
