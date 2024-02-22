@@ -920,6 +920,17 @@ hr {
     margin-bottom: 30px;
 }
 
+/* Gaya untuk container portfolio */
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    /* Memulai penempatan tombol dari bagian atas container */
+    position: relative;
+    /* Menjadikan container relatif */
+}
+
 .portfolio #portfolio-flters {
     padding: 0;
     margin: 0 auto 35px auto;
@@ -1083,8 +1094,8 @@ hr {
 }
 
 #moreportfolio {
-    margin-left: 330px;
-    margin-top: 20px;
+    /* margin-left: 330px; */
+    /* margin-top: 20px; */
     width: 200px;
     height: 40px;
     border-radius: 20px;
@@ -1095,6 +1106,13 @@ hr {
     justify-content: center;
     text-align: center;
     align-items: center;
+    position: absolute;
+    bottom: -30px;
+    /* Jarak dari bagian bawah */
+    left: 50%;
+    /* Posisi horizontal di tengah */
+    transform: translateX(-50%);
+    /* Memposisikan tombol ke tengah */
 }
 
 #moreportfolio:hover {
@@ -1105,6 +1123,23 @@ hr {
     border-radius: 20px; */
 }
 
+/* Tambahkan animasi */
+@keyframes zoomIn {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Terapkan animasi pada gambar */
+.portfolio-item.show {
+    animation: zoomIn 0.5s ease forwards;
+}
 
 /* Mobile 476/576/768 */
 @media screen and (max-width: 768px) {
@@ -1209,6 +1244,7 @@ hr {
 .skill {
     padding: 30px;
     /* Atur padding agar lebih enak dilihat */
+    margin-top: 30px;
 }
 
 .skill .wow {

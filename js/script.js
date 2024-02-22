@@ -243,15 +243,12 @@ window.onload = () => {
 			// getting data-name value of user selected item and store in a filtername variable
 			filterImg.forEach((image) => {
 				let filterImages = image.getAttribute("data-name");
-				// getting image data-name value
-				// if user selected item data-name value is equal to images data-name value
-				// or user selected item data-name value is equal to "all"
 				if ((filterImages == filterName) || (filterName == "all")) {
-					image.parentElement.parentElement.style.display = "block";
-					// show the image
+					image.parentElement.parentElement.classList.remove("hide");
+					image.parentElement.parentElement.classList.add("show");
 				} else {
-					image.parentElement.parentElement.style.display = "none";
-					// hide the image
+					image.parentElement.parentElement.classList.add("hide");
+					image.parentElement.parentElement.classList.remove("show");
 				}
 			});
 		}
