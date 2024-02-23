@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en" id="home">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Ramawow~</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="fonts/icofont/icofont.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="shortcut icon" href="img/R.ico">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=https://fonts.googleapis.com/css?family=Inconsolata:400,500,600,700|Raleway:400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- aos animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- text animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <!-- Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <!-- ===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <!-- box img -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.0/baguetteBox.min.css" />
+    <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+</head>
+
+<!-- return false Tidak bisa klik kanan, ctrl A & C -->
+
+<body oncontextmenu="return false" onselectstart="return false"
+    onkeydown="if ((arguments[0] || window.event).ctrlKey) return false">
+    <!-- End -->
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-turun"
+                    aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="index.html#home" class="navbar-brand page-scroll">Ramawow</a>
+                <div class="darkLight-searchBox">
+                    <div class="dark-light">
+                        <i class='bx bx-moon moon'></i>
+                        <i class='bx bx-sun sun'></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbar-turun">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html#about" class="page-scroll" data-translate-id="Tentang"
+                            data-translate-en="About">About</a>
+                    </li>
+                    <li><a href="index.html#portfolio" class="page-scroll" data-translate-id="Portofolio"
+                            data-translate-en="Portfolio">Portfolio</a></li>
+                    <li><a href="index.html#skill" class="page-scroll" data-translate-id="Keahlian"
+                            data-translate-en="Skill">Skill</a></li>
+                    <!-- <li><a href="#sertificate" class="page-scroll">Certificate</a></li> -->
+                    <li><a href="index.html#workexp" class="page-scroll" data-translate-id="Pengalaman Kerja"
+                            data-translate-en="Work Exp">Work Exp</a></li>
+                    <li><a href="index.html#contact" class="page-scroll" data-translate-id="Kontak"
+                            data-translate-en="Contact">Contact</a>
+                    </li>
+                    <div style="display: flex; margin: 12px;">
+                        <li class="translate" id="translate-id"><button>ID</button></li>
+                        <li class="translate" id="translate-en"><button>EN</button></li>
+                    </div>
+                    <!-- <li class="dark-mode-toggle">
+            <span class="dark-mode-icon" id="dark-mode-toggle"></span>
+        </li> -->
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Akhir Navbar -->
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section class="breadcrumbs">
+        <div class="container">
+
+            <div class="d-flex justify-content-between align-items-center">
+                <h2>Portfolio Details</h2>
+                <ol>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#portfolio">Portfolio</a></li>
+                    <li> Portfolio Details</li>
+                </ol>
+            </div>
+
+        </div>
+    </section><!-- Breadcrumbs Section -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <!-- Portofolio -->
+    <div class="portfolio" id="portfolio" style="margin-bottom: 90px;">
+        <div class="container" data-aos="fade-up" data-aos-delay="100" data-aos-duration="2000"
+            data-aos-easing="ease-in-out">
+            <h1 class="col-sm-12 text-center" data-translate-id="Portofolio" data-translate-en="Portfolio">Portfolio
+            </h1>
+            <hr>
+
+            <div class="nav-portfolio">
+                <div class="items">
+                    <span class="item active" data-name="all">All</span>
+                    <span class="item" data-name="app">App</span>
+                    <span class="item" data-name="web">Web</span>
+                    <span class="item" data-name="game">Game</span>
+                    <span class="item" data-name="desain">Designer</span>
+                    <span class="item" data-name="video">Videography</span>
+                </div>
+            </div>
+
+            <div class="row portfolio-container">
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-aos="fade-up" data-aos-delay="100"
+                    data-aos-duration="2000">
+                    <div class="portfolio-wrap rounded">
+                        <img src="img/Apkprofilhimatif-Mockup.png" data-name="app" class="img-fluid" alt=""
+                            style="width: 350px; height: 400px;">
+                        <div class="details">
+                            <span class="term">App Inventor, Mobile</span>
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>Himatif Profile Application</h4>
+                            <p>App</p>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="img/Apkprofilhimatif.jpeg" data-gallery="portfolioGallery"
+                                class="portfolio-lightbox" title="Himatif Profile Application"><i
+                                    class="bx bx-plus"></i></a>
+                            <a href="https://github.com/Ramawow/apk" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-aos="fade-up" data-aos-delay="100"
+                    data-aos-duration="2000">
+                    <div class="portfolio-wrap">
+                        <img src="img/ApkSIFSHS-Mockup.png" data-name="app" class="img-fluid" alt=""
+                            style="width: 350px; height: 400px;">
+                        <div class="details">
+                            <span class="term">App Inventor, Mobile</span>
+                        </div>
+                        <div class="portfolio-info">
+                            <h4 style="font-size: medium;">FSHS Information System Application</h4>
+                            <p>App</p>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="img/ApkSIFSHS.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                                title="FSHS Information System Application"><i class="bx bx-plus"></i></a>
+                            <a href="https://github.com/Ramawow/apk" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-aos="fade-up" data-aos-delay="100"
+                    data-aos-duration="2000">
+                    <div class="portfolio-wrap">
+                        <img src="img/Apksisteminformasi-Mockup.png" class="img-fluid" alt="" data-name="app"
+                            style="width: 350px; height: 400px;">
+                        <div class="details">
+                            <span class="term">App Inventor, Mobile</span>
+                        </div>
+                        <div class="portfolio-info">
+                            <h4 style="font-size: medium;">Article Information System Application</h4>
+                            <p>App</p>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="img/Apksisteminformasi.jpeg" data-gallery="portfolioGallery"
+                                class="portfolio-lightbox" title="Article Information System Application"><i
+                                    class="bx bx-plus"></i></a>
+                            <a href="https://github.com/Ramawow/apk" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="img/ApkTinyDB-Mockup.png" class="img-fluid" alt="" data-name="app"
+              style="width: 350px; height: 400px;">
+            <div class="portfolio-info">
+              <h4>TinyDB App</h4>
+              <p>App</p>
+            </div>
+            <div class="portfolio-links">
+              <a href="img/ApkTinyDB.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                title="TinyDB App"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external"
+                title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="img/Inputdatapenduduk-Mockup.png" class="img-fluid" alt="" data-name="app"
+              style="width: 350px; height: 400px;">
+            <div class="portfolio-info">
+              <h4>Population Data Input Application</h4>
+              <p>App</p>
+            </div>
+            <div class="portfolio-links">
+              <a href="img/Inputdatapenduduk.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                title="Population Data Input Application"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external"
+                title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+        </div> -->
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-aos="zoom-in" data-aos-delay="100"
+                    data-aos-duration="3000">
+                    <div class="portfolio-wrap">
+                        <img src="img/Kalkulator-Mockup.png" class="img-fluid" alt="" data-name="app"
+                            style="width: 350px; height: 400px;">
+                        <div class="details">
+                            <span class="term">App Inventor, Mobile</span>
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>Calculator Application</h4>
+                            <p>App</p>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="img/Kalkulator.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                                title="Calculator Application"><i class="bx bx-plus"></i></a>
+                            <a href="https://github.com/Ramawow/apk" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-aos="zoom-in" data-aos-delay="100"
+                    data-aos-duration="3000">
+                    <div class="portfolio-wrap">
+                        <img src="img/Pendidikan-Mockup.png" class="img-fluid" data-name="web" alt=""
+                            style="width: 350px; height: 400px;">
+                        <div class="details">
+                            <span class="term">HTML, CSS, Javascript, Bootstrap</span>
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>Educational Website</h4>
+                            <p>Web</p>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="img/Pendidikan.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                                title="Educational Website"><i class="bx bx-plus"></i></a>
+                            <a href="https://ramawow.github.io/Unknown-Code/" title="More Details"><i
+                                    class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-aos="zoom-in" data-aos-delay="100"
+                    data-aos-duration="3000">
+                    <div class="portfolio-wrap">
+                        <img src="img/portfolio-mockup.png" class="img-fluid" alt="" data-name="web"
+                            style="width: 350px; height: 400px;">
+                        <div class="details">
+                            <span class="term">HTML, CSS, Javascript, Bootstrap</span>
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>Portfolio Website</h4>
+                            <p>Web</p>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="img/portfolio.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                                title="Portfolio Website"><i class="bx bx-plus"></i></a>
+                            <a href="portfolio-details.html" class="portfolio-details-lightbox"
+                                data-glightbox="type: external" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-aos="zoom-in" data-aos-delay="100"
+                    data-aos-duration="3000">
+                    <div class="portfolio-wrap">
+                        <img src="img/wisata-selo-mockup.png" class="img-fluid" alt="" data-name="web"
+                            style="width: 350px; height: 400px;">
+                        <div class="details">
+                            <span class="term">HTML, CSS, Javascript, Bootstrap</span>
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>Selo Tourism Website</h4>
+                            <p>Web</p>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="img/wisata-selo.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                                title="Selo Tourism Website"><i class="bx bx-plus"></i></a>
+                            <a href="https://wisata-selo.vercel.app/" title="More Details"><i
+                                    class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-aos="zoom-in" data-aos-delay="100"
+                    data-aos-duration="3000">
+                    <div class="portfolio-wrap">
+                        <img src="img/nuha-mockup.png" class="img-fluid" alt="" data-name="web"
+                            style="width: 350px; height: 400px;">
+                        <div class="details">
+                            <span class="term">HTML, CSS, Javascript, Bootstrap, PHP, MySQL</span>
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>Nuha Solution Website Application</h4>
+                            <p>Web App</p>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="img/tablet-nuha.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                                title="Nuha Solution Website Application"><i class="bx bx-plus"></i></a>
+                            <a href="https://nuhasolution.com/login/index.php" title="More Details"><i
+                                    class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-desain" data-aos="zoom-in" data-aos-delay="100"
+                    data-aos-duration="3000">
+                    <div class="portfolio-wrap">
+                        <img src="img/desain-mockup.png" class="img-fluid" alt="" data-name="desain"
+                            style="width: 350px; height: 400px;">
+                        <div class="details">
+                            <span class="term">Canva</span>
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>Content Desain</h4>
+                            <p>Desain</p>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="img/mobile-desain.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                                title="Content Desain"><i class="bx bx-plus"></i></a>
+                            <a href="https://instagram.com/ramadhanclass/" title="More Details"><i
+                                    class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-video" data-aos="zoom-in" data-aos-delay="100"
+                    data-aos-duration="3000">
+                    <div class="portfolio-wrap">
+                        <img src="img/video-mockup.png" class="img-fluid" alt="" data-name="video"
+                            style="width: 350px; height: 400px;">
+                        <div class="details">
+                            <span class="term">Canva, Kinemaster</span>
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>Content Videos</h4>
+                            <p>Video</p>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="img/video.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                                title="Content Videos"><i class="bx bx-plus"></i></a>
+                            <a href="https://youtu.be/XqF6YeaTDbo?si=K-Sd_izwZefFhOZA" title="More Details"><i
+                                    class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-game" data-aos="zoom-in" data-aos-delay="100"
+                    data-aos-duration="3000">
+                    <div class="portfolio-wrap">
+                        <img src="img/Mockup-SnakeGame.png" class="img-fluid" alt="" data-name="game"
+                            style="width: 350px; height: 400px;">
+                        <div class="details">
+                            <span class="term">HTML, CSS, Javascript</span>
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>Snake Game</h4>
+                            <p>Game</p>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="img/GameSnake.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                                title="Snake Game"><i class="bx bx-plus"></i></a>
+                            <a href="https://ramawow.github.io/snake/" title="More Details"><i
+                                    class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-game" data-aos="zoom-in" data-aos-delay="100"
+                    data-aos-duration="3000">
+                    <div class="portfolio-wrap">
+                        <img src="img/Mockup-GameFlappyBird.png" class="img-fluid" alt="" data-name="game"
+                            style="width: 350px; height: 400px;">
+                        <div class="details">
+                            <span class="term">HTML, CSS, Javascript</span>
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>Game Flappy Bird</h4>
+                            <p>Game</p>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="img/gameflappy-bird.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                                title="Game Flappy Bird"><i class="bx bx-plus"></i></a>
+                            <a href="https://flappy-bird-nu-one.vercel.app/" title="More Details"><i
+                                    class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <a class="btn" id="moreportfolio" href="https://github.com/Ramawow" data-aos="fade-up"
+                    data-aos-delay="100" data-translate-id="Project Lainnya" data-translate-en="More Project">More
+                    Project</a> -->
+
+            </div>
+
+
+            <!-- <div class="row">
+        <div class="portfolio-container" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-4 col-md-6 portfolio-thumbnail">
+            <a class="popup-img1" href="img/Apkprofilhimatif.jpeg" data-name="bag"
+              data-caption="Aplikasi Profil Himatif">
+              <img src="img/Apkprofilhimatif.jpeg" alt="img" style="width: 300px; height: 350px;">
+            </a>
+            <h4 class="text-center" data-translate-id="Aplikasi Profil Himatif"
+              data-translate-en="Himative Profile Application">Aplikasi Profil Himatif</h4>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-thumbnail">
+            <a class="popup-img1" href="img/ApkSIFSHS.jpeg" data-name="shoe">
+              <img src="img/ApkSIFSHS.jpeg" alt="img" style="width: 300px; height: 350px;">
+            </a>
+            <h4 class="text-center" data-translate-id="Aplikasi Sistem Informasi FSHS"
+              data-translate-en="FSHS Information System Application">FSHS Information System Application</h4>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-thumbnail">
+            <a class="popup-img1" href="img/Apksisteminformasi.jpeg">
+              <img src="img/Apksisteminformasi.jpeg" alt="img" style="width: 300px; height: 350px;">
+            </a>
+            <h4 class="text-center" data-translate-id="Aplikasi Sistem Informasi Artikel"
+              data-translate-en="Article Information System Application">Article Information System Application</h4>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-thumbnail">
+            <a class="popup-img1" href="img/ApkTinyDB.jpeg">
+              <img src="img/ApkTinyDB.jpeg" alt="program" style="width: 300px; height: 350px;">
+            </a>
+            <h4 class="text-center" data-translate-id="Aplikasi TinyDB" data-translate-en="TinyDB App">Aplikasi TinyDB
+            </h4>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-thumbnail">
+            <a class="popup-img1" href="img/Inputdatapenduduk.jpeg">
+              <img src="img/Inputdatapenduduk.jpeg" alt="img" style="width: 300px; height: 350px;">
+            </a>
+            <h4 class="text-center" data-translate-id="Aplikasi Input Data Penduduk"
+              data-translate-en="Population Data Input Application">Aplikasi Input Data Penduduk</h4>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-thumbnail">
+            <a class="popup-img1" href="img/Kalkulator.jpeg">
+              <img src="img/Kalkulator.jpeg" alt="img" style="width: 300px; height: 350px;">
+            </a>
+            <h4 class="text-center" data-translate-id="Aplikasi Kalkulator" data-translate-en="Calculator Application">
+              Aplikasi Kalkulator</h4>
+          </div>
+        </div>
+      </div> -->
+
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <div class="container text-center">
+            <div class="row">
+                <p>&copy copyright 2021-2024 | built by. <a
+                        href="https://www.instagram.com/muhammadramadhantaufiq/">Ramawow</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi-arrow-up-short"></i></a>
+
+    <!-- Java enable copas text -->
+
+    <script type="text/JavaScript">
+    //courtesy of BoogieJack.com
+    function killCopy(e){
+    return false
+    }
+    function reEnable(){
+    return true
+    }
+    document.onselectstart=new Function ("return false")
+    if (window.sidebar){
+    document.onmousedown=killCopy
+    document.onclick=reEnable
+    }
+    </script>
+
+    <!-- End Java -->
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script src="vendor/swiper/swiper-bundle.min.js"></script>
+    <!-- box image -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.0/baguetteBox.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            baguetteBox.run('.portfolio-container');
+        });
+    </script>
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.swiper-slide');
+
+        function showSlide(n) {
+            slides.forEach(slide => slide.style.display = 'none');
+            slideIndex = (n + slides.length) % slides.length;
+            slides[slideIndex].style.display = 'block';
+        }
+
+        function nextSlide() {
+            showSlide(slideIndex + 1);
+        }
+
+        function prevSlide() {
+            showSlide(slideIndex - 1);
+        }
+
+        function autoSlide() {
+            nextSlide();
+            setTimeout(autoSlide, 3000); // Change slide every 3 seconds
+        }
+
+        autoSlide(); // Start automatic sliding
+
+
+    </script>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>
