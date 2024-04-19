@@ -410,7 +410,8 @@ hr {
 .icofont-youtube,
 .icofont-blogger,
 .icofont-whatsapp,
-.icofont-telegram {
+.icofont-telegram,
+.bi-github {
     color: #fff;
     border: 2px solid #fff;
     border-radius: 50%;
@@ -427,6 +428,12 @@ hr {
     border: 2px solid #1DA1F2;
     background: #1DA1F2;
     color: #fff;
+}
+
+.social-icons li a .bi-github:hover {
+    border: 2px solid #525455;
+    background: white;
+    color: black;
 }
 
 .social-icons li a .icofont-facebook:hover {
