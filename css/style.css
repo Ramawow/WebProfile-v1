@@ -11,6 +11,39 @@ h6 {
     font-family: "Raleway", sans-serif;
 }
 
+/*===== Colores =====*/
+:root {
+    --first-color: #5361ff;
+    --white-color: #fafaff;
+    --dark-color: #2a3b47;
+    --text-color: #697477;
+}
+
+/*===== Fuente y tipografia =====*/
+:root {
+    --body-font: 'Montserrat', sans-serif;
+    --big-font-size: 6.25rem;
+    --h2-font-size: 1.25rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
+}
+
+@media screen and (min-width: 768px) {
+    :root {
+        --big-font-size: 10.5rem;
+        --h2-font-size: 2rem;
+        --normal-font-size: 1rem;
+        --small-font-size: 0.875rem;
+    }
+}
+
+/*===== Margenes =====*/
+:root {
+    --mb-1: 0.5rem;
+    --mb-2: 1rem;
+    --mb-3: 1.5rem;
+    --mb-4: 2rem;
+}
 
 /* ===== Colours ===== */
 :root {
@@ -777,7 +810,10 @@ hr {
 
 .portfolio {
     padding-top: 30px;
+    margin-top: 10px;
     margin-bottom: -60px;
+    /* background-color: #fcfafa; */
+    /* background-image: url(../img/bg3.jpg); */
 }
 
 .portfolio h1 {
@@ -1277,6 +1313,17 @@ hr {
         overflow-y: hidden;
     }
 
+    .skills__container {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        /* display: none; */
+        flex-wrap: wrap;
+    }
+
+    .skills__img img {
+        width: 100%;
+    }
+
     .progress-bar {
         width: unset;
         /* Hapus min-width agar responsif */
@@ -1292,6 +1339,81 @@ hr {
     }
 }
 
+/* ===== SKILLS =====*/
+.skills__container {
+    row-gap: 2rem;
+    /* justify-content: center;
+    align-items: flex-start; */
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    /* align-items: flex-start; */
+    /* Memulai penempatan tombol dari bagian atas container */
+    position: relative;
+    /* Menjadikan container relatif */
+}
+
+.skills__subtitle {
+    color: var(--first-color);
+    margin-bottom: var(--mb-3);
+}
+
+.skills__name {
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-right: var(--mb-2);
+    margin-bottom: var(--mb-3);
+    padding: 0.25rem 0.5rem;
+    background-color: var(--white-color);
+    border-radius: 0.50rem;
+}
+
+.skills__name:hover {
+    transform: scale(1.05);
+    /* Memberikan efek scaling saat hover */
+}
+
+.skills__project {
+    display: inline-block;
+    font-size: var(--large-font-size);
+    margin-top: var(--mb-2);
+    margin-right: var(--mb-2);
+    margin-bottom: var(--mb-3);
+    padding: 0.25rem 0.5rem;
+    background-color: blue;
+    color: var(--white-color);
+    border-radius: 0.5rem;
+}
+
+.btn_black {
+    display: inline-block;
+    font-size: var(--small-font-size);
+    padding: 0.25rem 0.5rem;
+    background-color: black;
+    color: var(--white-color);
+    border-radius: 0.3rem;
+}
+
+.skills__project:hover {
+    background-color: white;
+    color: black;
+}
+
+.skills__name:hover {
+    background-color: var(--first-color);
+    color: var(--white-color);
+}
+
+.skills__img img {
+    border-radius: 0.5rem;
+    animation: shake 5s infinite;
+}
+
+.skills__img:hover {
+    -webkit-animation: jello 0.8s both;
+    animation: jello 0.8s both;
+}
+
 /* work exp*/
 
 .workexp {
@@ -1299,7 +1421,7 @@ hr {
     background-color: #3b9cff;
     min-height: 750px;
     color: #fff;
-    animation: fadeIn 1s ease-in-out;
+    /* animation: fadeIn 1s ease-in-out; */
     /* Menambahkan animasi fadeIn */
 }
 
@@ -1312,7 +1434,7 @@ hr {
     padding: 15px;
     margin-top: 20px;
     border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
+    /* transition: transform 0.3s ease-in-out; */
     /* Menambahkan animasi saat hover */
 }
 
